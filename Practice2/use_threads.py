@@ -17,12 +17,12 @@ class UseThreads:
             self.saving_thread.join()
 
     def save_notes(self, username, users):
-        last_notes_count = 0
+        last_notes = None 
         while not self.stop_thread:
             time.sleep(5)  
             notes = users.get_notes(username)
-            current_notes_count = len(notes)
             
-            if current_notes_count != last_notes_count:
+            if notes != last_notes:  
                 print(f"\n(Автосохранение)")
-                last_notes_count = current_notes_count
+                users._save_data(users._load_data()) 
+                last_notes = notes.copy()  
