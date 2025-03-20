@@ -35,4 +35,4 @@ class Export_Import:
             return []
         except Exception as e:
             print(f"Ошибка при импорте данных: {e}")
-            return []
+            return [] 

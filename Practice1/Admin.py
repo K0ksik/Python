@@ -68,7 +68,7 @@ class Admin(User):
             store.export_instruments()  
         elif data_type == "user":
             store.export_users()  
-        else:
+        else:  
             print("Некорректный тип данных")
 
     def import_data(self, store):

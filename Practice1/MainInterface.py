@@ -7,7 +7,7 @@ def main():
 
     while True:
         print("\nДобро пожаловать в музыкальный магазин!")
-        action = input(
+        action = input( 
             "Выберите действие:\n"
             "1. Вход\n"
             "2. Регистрация\n"
@@ -21,7 +21,7 @@ def main():
                 user.menu(store)
         elif action == '2':
             role = input("Введите роль (adm - админ, cust - покупатель): ").lower()
-            username = input("Введите имя пользователя: ")
+            username = input("Введите имя пользователя: ")  
             password = input("Введите пароль: ")
             if role == "adm":
                 user = Admin(username, password)

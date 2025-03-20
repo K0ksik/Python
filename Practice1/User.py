@@ -15,4 +15,4 @@ class User(ABC):
 
     @abstractmethod
     def menu(self, store):
-        pass
+        pass                 

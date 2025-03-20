@@ -65,7 +65,7 @@ class Customer(User):
     def view_purchase_history(self):
         if not self.purchase_history:
             print("История покупок пуста")
-        else:
+        else:   
             print("История покупок:")
             for purchase in self.purchase_history:
                 print(purchase)
@@ -83,13 +83,11 @@ class Customer(User):
             except ValueError:
                 print("Некорректный формат диапазона цен")
                 return
-
         filtered_instruments = store.filter_instruments(
             category=category if category else None,
             color=color if color else None,
             price_range=price_range_tuple if price_range else None
         )
-
         if filtered_instruments:
             print("\nОтфильтрованные инструменты:")
             for instrument in filtered_instruments:
@@ -100,15 +98,13 @@ class Customer(User):
     def sort_instruments_menu(self, store):
         print("\nСортировка инструментов:")
         order = input("Сортировать по возрастанию (1) или убыванию (2)? ")
-
         if order == '1':
             sorted_instruments = store.sort_instruments(reverse=False)
         elif order == '2':
             sorted_instruments = store.sort_instruments(reverse=True)
         else:
             print("Некорректный ввод")
-            return
-
+            return   
         if sorted_instruments:
             print("\nОтсортированные инструменты:")
             for instrument in sorted_instruments:

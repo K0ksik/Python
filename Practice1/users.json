@@ -1,0 +1,15 @@
+[
+    {
+        "username": "1",
+        "password": "1",
+        "role": "cust",
+        "purchase_history": [
+            "Гитара - 30000.0 руб."
+        ]
+    },
+    {
+        "username": "2",
+        "password": "2",
+        "role": "adm"
+    }
+]
