@@ -1,3 +1,4 @@
+# users.py
 import json
 import os
 import threading
@@ -5,7 +6,7 @@ import threading
 class Users:
     def __init__(self):
         self.file_path = "notes.json"
-        self.lock = threading.Lock() 
+        self.lock = threading.Lock()
 
     def register_user(self, username, password):
         data = self._load_data()
@@ -42,6 +43,6 @@ class Users:
         return {}
 
     def _save_data(self, data):
-        with self.lock: 
+        with self.lock:
             with open(self.file_path, "w", encoding="utf-8") as file:
                 json.dump(data, file, ensure_ascii=False, indent=4)
